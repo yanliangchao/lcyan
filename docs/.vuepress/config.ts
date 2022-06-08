@@ -15,8 +15,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "Evan's blog",
-      description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。',
+      title: "Lcyan",
+      description: '编程和运维总结',
     }
   },
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
@@ -27,50 +27,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '前端',
-        link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        text: '运维',
+        link: '/ops/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: '前端文章',
-            items: [
-              { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-            ],
-          },
-          {
-            text: '学习笔记',
-            items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-              { text: '《ES6 教程》', link: '/note/es6/' },
-              { text: '《Vue》', link: '/note/vue/' },
-              { text: '《React》', link: '/note/react/' },
-              {
-                text: '《TypeScript 从零实现 axios》',
-                link: '/note/typescript-axios/',
-              },
-              {
-                text: '《Git》',
-                link: '/note/git/',
-              },
-              {
-                text: 'TypeScript',
-                link: '/pages/51afd6/',
-              },
-              {
-                text: 'JS设计模式总结',
-                link: '/pages/4643cd/',
-              },
-            ],
-          },
+          { text: 'Nginx', link: '/pages/9e06b2/' }
         ],
       },
       {
-        text: '页面',
-        link: '/ui/',
+        text: '编程',
+        link: '/code/',
         items: [
-          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
+          { text: 'JAVA', link: '/pages/b186bf/' },
+          { text: 'Shell', link: '/pages/db8b30/' }
+          //{ text: 'Python', link: '/pages/0a83b083bdf257cb/' },
+          //{ text: 'Golang', link: '/pages/0a83b083bdf257cb/' },
+          //{ text: 'JS', link: '/pages/0a83b083bdf257cb/' }
         ],
       },
       {
@@ -81,17 +52,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
           { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
           { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-        ],
-      },
-      {
-        text: '更多',
-        link: '/more/',
-        items: [
-          { text: '学习', link: '/pages/f2a556/' },
-          { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
         ],
       },
       { text: '关于', link: '/about/' },
@@ -113,10 +73,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '归档', link: '/archives/' },
         ],
       },
+      {
+        text: '更多',
+        link: '/more/',
+        items: [
+          { text: '学习', link: '/pages/f2a556/' },
+          { text: '面试', link: '/pages/aea6571b7a8bae86/' },
+          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
+          { text: '实用技巧', link: '/pages/baaa02/' },
+          { text: '友情链接', link: '/friends/' },
+        ],
+      },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+    repo: 'yanliangchao/yanliangchao.github.io', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
@@ -156,15 +127,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
-      name: 'xugaoyi', // 必需
-      link: 'https://github.com/xugaoyi', // 可选的
+      name: 'lcyan', // 必需
+      link: 'https://github.com/yanliangchao', // 可选的
     },
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: 'https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg',
-      name: 'Evan Xu',
-      slogan: '前端界的小学生',
+      avatar: 'img/dengxia.gif',
+      name: 'Alex Yan',
+      slogan: '运维界的小学生',
     },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -174,12 +145,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:894072666@qq.com',
+          link: 'liangchao.yan@outlook.com',
         },
         {
           iconClass: 'icon-github',
           title: 'GitHub',
-          link: 'https://github.com/xugaoyi',
+          link: 'https://github.com/yanliangchao',
         },
         {
           iconClass: 'icon-erji',
@@ -193,14 +164,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2019, // 博客创建年份
       copyrightInfo:
-        'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
+        'Alex Yan | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'xugaoyi',
-        link: 'https://github.com/xugaoyi'
+        name: 'Lcyan',
+        link: 'https://github.com/yanliangchao'
       }
     },
 
@@ -215,7 +186,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown',
+        content: '暂无',
       },
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
@@ -236,6 +207,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     'vuepress-plugin-baidu-autopush', // 百度自动推送
 
+    // 鼠标点击后散开小星星
+    'cursor-effects',
+
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
       {
@@ -244,37 +218,59 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ],
 
     // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
-    // 'fulltext-search',
+    'fulltext-search',
 
-    // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
+    // 阅读顶部进度条
+    'reading-progress',
+    // 自定义插件
     [
-      'thirdparty-search',
       {
-        thirdparty: [
-          {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
-          },
-        ],
+        name: 'custom-plugins',
+          globalUIComponents: ["LastReadingPopup"], // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
       }
     ],
+    // rss 配置
+    [
+      'vuepress-plugin-rss',
+          {
+            base_url: '/', // required
+            copyright: '二丫讲梵', // optional
+            // filter some post
+            filter: (frontmatter) => { return [true] },
+            // How much articles
+            count: 20,
+      }
+    ],
+
+    // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
+    // [
+    //   'thirdparty-search',
+    //   {
+    //     thirdparty: [
+    //       {
+    //         title: '在MDN中搜索',
+    //         frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+    //         behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+    //       },
+    //       {
+    //         title: '在Runoob中搜索',
+    //         frontUrl: 'https://www.runoob.com/?s=',
+    //       },
+    //       {
+    //         title: '在Vue API中搜索',
+    //         frontUrl: 'https://cn.vuejs.org/v2/api/#',
+    //       },
+    //       {
+    //         title: '在Bing中搜索',
+    //         frontUrl: 'https://cn.bing.com/search?q=',
+    //       },
+    //       {
+    //         title: '通过百度搜索本站的',
+    //         frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20',
+    //       },
+    //     ],
+    //   }
+    // ],
 
     [
       'one-click-copy', // 代码块复制按钮
@@ -313,11 +309,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          clientID: '9a6d5bb87ebdc1b80135',
+          clientSecret: '70e3bbcac96933c7fbecf31d9bae7ee378e7324f',
+          repo: 'yanliangchao.github.io', // GitHub 仓库
+          owner: 'yanliangchao', // GitHub仓库所有者
+          admin: ['yanliangchao'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
